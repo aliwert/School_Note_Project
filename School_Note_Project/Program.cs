@@ -16,7 +16,7 @@ namespace School_Note_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmTeacher());
         }
     }
 }
