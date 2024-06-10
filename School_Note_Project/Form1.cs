@@ -16,5 +16,12 @@ namespace School_Note_Project
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            FrmStudentNotes frm = new FrmStudentNotes();
+            frm.no = textBox1.Text;
+            frm.Show();
+        }
     }
 }
