@@ -35,7 +35,7 @@
             this.TxtClubid = new System.Windows.Forms.TextBox();
             this.TxtClubName = new System.Windows.Forms.TextBox();
             this.BtnList = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnUpdate = new System.Windows.Forms.Button();
             this.BtnAdd = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -97,14 +97,15 @@
             this.BtnList.UseVisualStyleBackColor = true;
             this.BtnList.Click += new System.EventHandler(this.BtnList_Click);
             // 
-            // button2
+            // BtnUpdate
             // 
-            this.button2.Location = new System.Drawing.Point(545, 454);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 30);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Location = new System.Drawing.Point(545, 454);
+            this.BtnUpdate.Name = "BtnUpdate";
+            this.BtnUpdate.Size = new System.Drawing.Size(109, 30);
+            this.BtnUpdate.TabIndex = 6;
+            this.BtnUpdate.Text = "Update";
+            this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnAdd
             // 
@@ -160,7 +161,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnAdd);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.BtnList);
             this.Controls.Add(this.TxtClubName);
             this.Controls.Add(this.TxtClubid);
@@ -169,7 +170,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.Color.Black;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmClub";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmClub";
@@ -189,7 +190,7 @@
         private System.Windows.Forms.TextBox TxtClubid;
         private System.Windows.Forms.TextBox TxtClubName;
         private System.Windows.Forms.Button BtnList;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.Label label3;

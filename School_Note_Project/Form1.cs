@@ -23,5 +23,11 @@ namespace School_Note_Project
             frm.no = textBox1.Text;
             frm.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            FrmTeacher cl = new FrmTeacher();
+            cl.Show();
+        }
     }
 }

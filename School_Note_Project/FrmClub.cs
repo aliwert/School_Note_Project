@@ -70,11 +70,23 @@ namespace School_Note_Project
         private void button4_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand com = new SqlCommand("Delete From Tbl_Clubs WHERE CLUBSID=@P1", con);
-            com.Parameters.AddWithValue("@p1", TxtClubid.Text);
+            SqlCommand com = new SqlCommand("DELETE FROM Tbl_Clubs WHERE CLUBSID=@P1", con);
+            com.Parameters.AddWithValue("@P1", TxtClubid.Text);
             com.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Succesfully deleted");
+            list();
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand com = new SqlCommand("Update Tbl_Clubs set CLUBNAME=@p1 WHERE CLUBSID=@p2", con);
+            com.Parameters.AddWithValue("@p1", TxtClubName.Text);
+            com.Parameters.AddWithValue("@p2", TxtClubid.Text);
+            com.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Succesfully updated");
             list();
         }
     }
