@@ -16,5 +16,11 @@ namespace School_Note_Project
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmClub club = new FrmClub();
+            club.Show();
+        }
     }
 }
