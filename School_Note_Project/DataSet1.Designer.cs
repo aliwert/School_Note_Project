@@ -2887,13 +2887,28 @@ SELECT NOTEID, LSSNID, STNID, EXAM1, EXAM2, EXAM3, PROJECT, AVERAGE, STATUS FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        NOTEID, LSSNID, STNID, EXAM1, EXAM2, EXAM3, PROJECT, AVERAGE, STATU" +
                 "S\r\nFROM            Tbl_Notes\r\nWHERE        (STNID = @OGRID)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OGRID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "STNID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "UPDATE [Tbl_Notes] SET [LSSNID] = @LSSNID, [STNID] = @STNID, [EXAM1] = @EXAM1, [E" +
+                "XAM2] = @EXAM2, [EXAM3] = @EXAM3, [PROJECT] = @PROJECT, [AVERAGE] = @AVERAGE, [S" +
+                "TATUS] = @STATUS WHERE ([NOTEID] = @Original_NOTEID)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LSSNID", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "LSSNID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STNID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "STNID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EXAM1", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "EXAM1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EXAM2", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "EXAM2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EXAM3", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "EXAM3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PROJECT", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "PROJECT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AVERAGE", global::System.Data.SqlDbType.Decimal, 5, global::System.Data.ParameterDirection.Input, 5, 2, "AVERAGE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@STATUS", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "STATUS", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOTEID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NOTEID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3292,6 +3307,78 @@ SELECT NOTEID, LSSNID, STNID, EXAM1, EXAM2, EXAM3, PROJECT, AVERAGE, STATUS FROM
                     global::System.Nullable<decimal> Original_AVERAGE, 
                     global::System.Nullable<bool> Original_STATUS) {
             return this.Update(LSSNID, STNID, EXAM1, EXAM2, EXAM3, PROJECT, AVERAGE, STATUS, Original_NOTEID, Original_LSSNID, Original_STNID, Original_EXAM1, Original_EXAM2, Original_EXAM3, Original_PROJECT, Original_AVERAGE, Original_STATUS, Original_NOTEID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateNote(global::System.Nullable<byte> LSSNID, global::System.Nullable<int> STNID, global::System.Nullable<byte> EXAM1, global::System.Nullable<byte> EXAM2, global::System.Nullable<byte> EXAM3, global::System.Nullable<byte> PROJECT, global::System.Nullable<decimal> AVERAGE, global::System.Nullable<bool> STATUS, int Original_NOTEID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((LSSNID.HasValue == true)) {
+                command.Parameters[0].Value = ((byte)(LSSNID.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((STNID.HasValue == true)) {
+                command.Parameters[1].Value = ((int)(STNID.Value));
+            }
+            else {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((EXAM1.HasValue == true)) {
+                command.Parameters[2].Value = ((byte)(EXAM1.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((EXAM2.HasValue == true)) {
+                command.Parameters[3].Value = ((byte)(EXAM2.Value));
+            }
+            else {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((EXAM3.HasValue == true)) {
+                command.Parameters[4].Value = ((byte)(EXAM3.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((PROJECT.HasValue == true)) {
+                command.Parameters[5].Value = ((byte)(PROJECT.Value));
+            }
+            else {
+                command.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((AVERAGE.HasValue == true)) {
+                command.Parameters[6].Value = ((decimal)(AVERAGE.Value));
+            }
+            else {
+                command.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            if ((STATUS.HasValue == true)) {
+                command.Parameters[7].Value = ((bool)(STATUS.Value));
+            }
+            else {
+                command.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            command.Parameters[8].Value = ((int)(Original_NOTEID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

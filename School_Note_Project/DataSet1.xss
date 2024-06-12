@@ -8,10 +8,10 @@
   <Shapes>
     <Shape ID="DesignTable:Tbl_Lessons" ZOrder="4" X="836" Y="83" Height="172" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:DataTable1" ZOrder="3" X="309" Y="186" Height="248" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
-    <Shape ID="DesignTable:Tbl_Notes" ZOrder="2" X="843" Y="396" Height="248" Width="202" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
+    <Shape ID="DesignTable:Tbl_Notes" ZOrder="1" X="843" Y="396" Height="267" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_Tbl_Notes_Tbl_Lessons" ZOrder="1" LineWidth="11">
+    <Connector ID="DesignRelation:FK_Tbl_Notes_Tbl_Lessons" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>948</X>
