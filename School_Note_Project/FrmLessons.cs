@@ -16,5 +16,11 @@ namespace School_Note_Project
         {
             InitializeComponent();
         }
+
+        private void FrmLessons_Load(object sender, EventArgs e)
+        {
+            DataSet1TableAdapters.Tbl_LessonsTableAdapter ds = new DataSet1TableAdapters.Tbl_LessonsTableAdapter();
+            dataGridView1.DataSource = ds.LessonList();
+        }
     }
 }

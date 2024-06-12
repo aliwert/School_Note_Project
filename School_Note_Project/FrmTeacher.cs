@@ -22,5 +22,11 @@ namespace School_Note_Project
             FrmClub club = new FrmClub();
             club.Show();
         }
+
+        private void BtnLesson_Click(object sender, EventArgs e)
+        {
+            FrmLessons lssn= new FrmLessons();
+            lssn.Show();
+        }
     }
 }

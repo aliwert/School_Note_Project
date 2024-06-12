@@ -122,9 +122,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(196, 412);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 19);
+            this.label2.Size = new System.Drawing.Size(107, 19);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Club Name:";
+            this.label2.Text = "LESSON NAME:";
             // 
             // label1
             // 
@@ -132,9 +132,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(217, 344);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 19);
+            this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 12;
-            this.label1.Text = "CLUB ID:";
+            this.label1.Text = "LESSON ID:";
             // 
             // dataGridView1
             // 
@@ -166,7 +166,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmLessons";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLessons";
+            this.Load += new System.EventHandler(this.FrmLessons_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
