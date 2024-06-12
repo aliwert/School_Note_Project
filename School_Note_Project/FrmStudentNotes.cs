@@ -21,7 +21,7 @@ namespace School_Note_Project
         public string no;
         private void FrmStudentNotes_Load(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select LSSNNAME, EXAM1, EXAM2, EXAM3, PROJECT, AVERAGE, STATUS from Tbl_Notes inner join Tbl_Lessons on Tbl_Notes.LSSNID = Tbl_Lessons.LSSNID where STNID=1", con);
+            SqlCommand cmd = new SqlCommand("select LSSNNAME, EXAM1, EXAM2, EXAM3, PROJECT, AVERAGE, STATUS from Tbl_Notes inner join Tbl_Lessons on Tbl_Notes.LSSNID = Tbl_Lessons.LSSNID where STNID=@p1", con);
             cmd.Parameters.AddWithValue("@p1", no);
             //this.Text = no.ToString();
             SqlDataAdapter da = new SqlDataAdapter(cmd);

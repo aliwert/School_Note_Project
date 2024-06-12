@@ -43,15 +43,7 @@ namespace School_Note_Project
         string a = "";
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            
-            if (radioButton1.Checked == true)
-            {
-                a = "Woman";
-            }
-            if (radioButton2.Checked == true)
-            {
-                a = "Man";
-            }
+
             ds.AddStudent(TxtName.Text,TxtSurname.Text, byte.Parse(CmbClub.SelectedValue.ToString()), a);
             MessageBox.Show("Student addition has been completed");
         }
@@ -64,28 +56,47 @@ namespace School_Note_Project
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             ds.DeleteStudent(int.Parse(TxtStudentid.Text));
-            MessageBox.Show("Deleted succesfully");
+            
         }
-        string gender= "";
+        
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             TxtStudentid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             TxtName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
             TxtSurname.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            CmbClub.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            gender = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
 
-            if(gender == "Woman")
-            {
-                radioButton1.Checked = true;
-                radioButton2.Checked = false;
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            ds.UpdateStudent(TxtName.Text, TxtSurname.Text, byte.Parse(CmbClub.SelectedValue.ToString()), a, int.Parse(TxtStudentid.Text));
+        }
 
-            }
-            if (gender == "Man")
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (radioButton1.Checked == true)
             {
-                radioButton1.Checked = false;
-                radioButton2.Checked = true;
+                a = "Woman";
             }
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (radioButton1.Checked == true)
+            {
+                a = "Woman";
+            }
+        }
+
+        private void BtnList_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+          dataGridView1.DataSource=   ds.GetStudent(TxtSearch.Text);
         }
     }
 }
