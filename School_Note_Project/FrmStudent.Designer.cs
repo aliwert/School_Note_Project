@@ -191,11 +191,13 @@
             // 
             // CmbClub
             // 
+            this.CmbClub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbClub.FormattingEnabled = true;
             this.CmbClub.Location = new System.Drawing.Point(207, 205);
             this.CmbClub.Name = "CmbClub";
             this.CmbClub.Size = new System.Drawing.Size(222, 31);
             this.CmbClub.TabIndex = 36;
+            this.CmbClub.SelectedIndexChanged += new System.EventHandler(this.CmbClub_SelectedIndexChanged);
             // 
             // radioButton1
             // 
