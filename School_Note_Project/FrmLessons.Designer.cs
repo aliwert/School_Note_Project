@@ -35,8 +35,8 @@
             this.BtnAdd = new System.Windows.Forms.Button();
             this.BtnUpdate = new System.Windows.Forms.Button();
             this.BtnList = new System.Windows.Forms.Button();
-            this.TxtClubName = new System.Windows.Forms.TextBox();
-            this.TxtClubid = new System.Windows.Forms.TextBox();
+            this.TxtLessonName = new System.Windows.Forms.TextBox();
+            this.TxtLessonid = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -74,6 +74,7 @@
             this.BtnDelete.TabIndex = 19;
             this.BtnDelete.Text = "Delete";
             this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // BtnAdd
             // 
@@ -93,6 +94,7 @@
             this.BtnUpdate.TabIndex = 17;
             this.BtnUpdate.Text = "Update";
             this.BtnUpdate.UseVisualStyleBackColor = true;
+            this.BtnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // BtnList
             // 
@@ -104,20 +106,20 @@
             this.BtnList.UseVisualStyleBackColor = true;
             this.BtnList.Click += new System.EventHandler(this.BtnList_Click);
             // 
-            // TxtClubName
+            // TxtLessonName
             // 
-            this.TxtClubName.Location = new System.Drawing.Point(312, 404);
-            this.TxtClubName.Name = "TxtClubName";
-            this.TxtClubName.Size = new System.Drawing.Size(348, 27);
-            this.TxtClubName.TabIndex = 15;
+            this.TxtLessonName.Location = new System.Drawing.Point(312, 404);
+            this.TxtLessonName.Name = "TxtLessonName";
+            this.TxtLessonName.Size = new System.Drawing.Size(348, 27);
+            this.TxtLessonName.TabIndex = 15;
             // 
-            // TxtClubid
+            // TxtLessonid
             // 
-            this.TxtClubid.Enabled = false;
-            this.TxtClubid.Location = new System.Drawing.Point(312, 336);
-            this.TxtClubid.Name = "TxtClubid";
-            this.TxtClubid.Size = new System.Drawing.Size(348, 27);
-            this.TxtClubid.TabIndex = 14;
+            this.TxtLessonid.Enabled = false;
+            this.TxtLessonid.Location = new System.Drawing.Point(312, 336);
+            this.TxtLessonid.Name = "TxtLessonid";
+            this.TxtLessonid.Size = new System.Drawing.Size(348, 27);
+            this.TxtLessonid.TabIndex = 14;
             // 
             // label2
             // 
@@ -147,6 +149,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(704, 186);
             this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // FrmLessons
             // 
@@ -160,8 +163,8 @@
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.BtnUpdate);
             this.Controls.Add(this.BtnList);
-            this.Controls.Add(this.TxtClubName);
-            this.Controls.Add(this.TxtClubid);
+            this.Controls.Add(this.TxtLessonName);
+            this.Controls.Add(this.TxtLessonid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -187,8 +190,8 @@
         private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.Button BtnList;
-        private System.Windows.Forms.TextBox TxtClubName;
-        private System.Windows.Forms.TextBox TxtClubid;
+        private System.Windows.Forms.TextBox TxtLessonName;
+        private System.Windows.Forms.TextBox TxtLessonid;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;

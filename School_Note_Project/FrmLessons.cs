@@ -35,10 +35,10 @@ namespace School_Note_Project
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            ds.AddLesson(TxtClubName.Text);
+            ds.AddLesson(TxtLessonName.Text);
             MessageBox.Show("Lesson addition process has been completed");
             list();
-            
+
         }
 
         private void BtnList_Click(object sender, EventArgs e)
@@ -50,6 +50,26 @@ namespace School_Note_Project
         {
             this.Hide();
 
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            ds.DeleteLesson(byte.Parse(TxtLessonid.Text));
+            MessageBox.Show("Lesson deleted succesfully");
+            list();
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            ds.UpdateLesson(TxtLessonName.Text, byte.Parse(TxtLessonid.Text));
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TxtLessonid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            TxtLessonName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+
+            
         }
     }
 }
