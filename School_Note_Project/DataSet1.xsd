@@ -89,19 +89,76 @@ SELECT LSSNID, LSSNNAME FROM Tbl_Lessons WHERE (LSSNID = @LSSNID)</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SchoolProjectConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="StudentList" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="StudentList" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="StudentList" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Tbl_Students.STNID, Tbl_Students.STNNAME, Tbl_Students.STNSURNAME, Tbl_Students.STNGENDER, Tbl_Clubs.CLUBNAME
+FROM            Tbl_Students INNER JOIN
+                         Tbl_Clubs ON Tbl_Students.STNCLB = Tbl_Clubs.CLUBSID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="STNID" DataSetColumn="STNID" />
+              <Mapping SourceColumn="STNNAME" DataSetColumn="STNNAME" />
+              <Mapping SourceColumn="STNSURNAME" DataSetColumn="STNSURNAME" />
+              <Mapping SourceColumn="STNGENDER" DataSetColumn="STNGENDER" />
+              <Mapping SourceColumn="CLUBNAME" DataSetColumn="CLUBNAME" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Tbl_Lessons" msprop:Generator_RowEvHandlerName="Tbl_LessonsRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_LessonsRowDeleted" msprop:Generator_RowDeletingName="Tbl_LessonsRowDeleting" msprop:Generator_RowEvArgName="Tbl_LessonsRowChangeEvent" msprop:Generator_TablePropName="Tbl_Lessons" msprop:Generator_RowChangedName="Tbl_LessonsRowChanged" msprop:Generator_RowChangingName="Tbl_LessonsRowChanging" msprop:Generator_TableClassName="Tbl_LessonsDataTable" msprop:Generator_RowClassName="Tbl_LessonsRow" msprop:Generator_TableVarName="tableTbl_Lessons" msprop:Generator_UserTableName="Tbl_Lessons">
+        <xs:element name="Tbl_Lessons" msprop:Generator_RowClassName="Tbl_LessonsRow" msprop:Generator_RowEvHandlerName="Tbl_LessonsRowChangeEventHandler" msprop:Generator_RowDeletedName="Tbl_LessonsRowDeleted" msprop:Generator_RowDeletingName="Tbl_LessonsRowDeleting" msprop:Generator_RowEvArgName="Tbl_LessonsRowChangeEvent" msprop:Generator_TablePropName="Tbl_Lessons" msprop:Generator_RowChangedName="Tbl_LessonsRowChanged" msprop:Generator_UserTableName="Tbl_Lessons" msprop:Generator_RowChangingName="Tbl_LessonsRowChanging" msprop:Generator_TableClassName="Tbl_LessonsDataTable" msprop:Generator_TableVarName="tableTbl_Lessons">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="LSSNID" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="LSSNID" msprop:Generator_ColumnPropNameInTable="LSSNIDColumn" msprop:Generator_ColumnVarNameInTable="columnLSSNID" msprop:Generator_UserColumnName="LSSNID" type="xs:unsignedByte" />
-              <xs:element name="LSSNNAME" msprop:Generator_ColumnPropNameInRow="LSSNNAME" msprop:Generator_ColumnPropNameInTable="LSSNNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnLSSNNAME" msprop:Generator_UserColumnName="LSSNNAME" minOccurs="0">
+              <xs:element name="LSSNID" msdata:ReadOnly="true" msprop:Generator_UserColumnName="LSSNID" msprop:Generator_ColumnPropNameInTable="LSSNIDColumn" msprop:Generator_ColumnPropNameInRow="LSSNID" msprop:Generator_ColumnVarNameInTable="columnLSSNID" type="xs:unsignedByte" />
+              <xs:element name="LSSNNAME" msprop:Generator_UserColumnName="LSSNNAME" msprop:Generator_ColumnPropNameInTable="LSSNNAMEColumn" msprop:Generator_ColumnPropNameInRow="LSSNNAME" msprop:Generator_ColumnVarNameInTable="columnLSSNNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="STNID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="STNID" msprop:Generator_ColumnPropNameInTable="STNIDColumn" msprop:Generator_ColumnVarNameInTable="columnSTNID" msprop:Generator_UserColumnName="STNID" type="xs:int" />
+              <xs:element name="STNNAME" msprop:Generator_ColumnPropNameInRow="STNNAME" msprop:Generator_ColumnPropNameInTable="STNNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnSTNNAME" msprop:Generator_UserColumnName="STNNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STNSURNAME" msprop:Generator_ColumnPropNameInRow="STNSURNAME" msprop:Generator_ColumnPropNameInTable="STNSURNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnSTNSURNAME" msprop:Generator_UserColumnName="STNSURNAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="STNGENDER" msprop:Generator_ColumnPropNameInRow="STNGENDER" msprop:Generator_ColumnPropNameInTable="STNGENDERColumn" msprop:Generator_ColumnVarNameInTable="columnSTNGENDER" msprop:Generator_UserColumnName="STNGENDER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CLUBNAME" msprop:Generator_ColumnPropNameInRow="CLUBNAME" msprop:Generator_ColumnPropNameInTable="CLUBNAMEColumn" msprop:Generator_ColumnVarNameInTable="columnCLUBNAME" msprop:Generator_UserColumnName="CLUBNAME" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -116,6 +173,10 @@ SELECT LSSNID, LSSNNAME FROM Tbl_Lessons WHERE (LSSNID = @LSSNID)</CommandText>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Tbl_Lessons" />
       <xs:field xpath="mstns:LSSNID" />
+    </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:STNID" />
     </xs:unique>
   </xs:element>
 </xs:schema>

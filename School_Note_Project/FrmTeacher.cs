@@ -33,5 +33,12 @@ namespace School_Note_Project
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FrmStudent student = new FrmStudent();
+            student.Show();
+
+        }
     }
 }
