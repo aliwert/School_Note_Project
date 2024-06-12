@@ -205,6 +205,7 @@
             this.BtnList.TabIndex = 56;
             this.BtnList.Text = "Calculate";
             this.BtnList.UseVisualStyleBackColor = true;
+            this.BtnList.Click += new System.EventHandler(this.BtnList_Click);
             // 
             // label8
             // 

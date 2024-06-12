@@ -49,5 +49,26 @@ namespace School_Note_Project
             TxtAverage.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
             TxtStatus.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
         }
+
+        private void BtnList_Click(object sender, EventArgs e)
+        {
+            int exam1, exam2, exam3, project;
+            double average;
+            string status;
+            exam1 = Convert.ToInt16(TxtExam1.Text);
+            exam2 = Convert.ToInt16(TxtExam2.Text);
+            exam3 = Convert.ToInt16(TxtExam3.Text);
+            project = Convert.ToInt16(TxtProject.Text);
+            average = (exam1 + exam2 + exam3 + project) / 4;
+            TxtAverage.Text = average.ToString();
+            if(average > 50)
+            {
+                TxtStatus.Text = "True";
+            }
+            else
+            {
+                TxtStatus.Text = "False";
+            }
+        } 
     }
 }
