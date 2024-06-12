@@ -28,5 +28,20 @@ namespace School_Note_Project
         {
             dataGridView1.DataSource = ds.StudentList();
         }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            string a = "";
+            if (radioButton1.Checked == true)
+            {
+                a = "Woman";
+            }
+            if (radioButton2.Checked == true)
+            {
+                a = "Man";
+            }
+            ds.AddStudent(TxtName.Text,TxtSurname.Text, byte.Parse(CmbClub.Text), a);
+            MessageBox.Show("Student addition has been completed");
+        }
     }
 }
