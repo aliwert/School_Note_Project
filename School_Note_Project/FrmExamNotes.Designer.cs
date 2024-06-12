@@ -33,23 +33,23 @@
             this.TxtStudentid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TxtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtSurname = new System.Windows.Forms.TextBox();
+            this.TxtExam1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtExam2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtExam3 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnList = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.TxtStatus = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TxtAverage = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtProject = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,29 +61,30 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1193, 266);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.BtnList);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.TxtStatus);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.TxtAverage);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.TxtProject);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.TxtExam3);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.TxtExam2);
             this.groupBox1.Controls.Add(this.TxtStudentid);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.TxtName);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.TxtSurname);
+            this.groupBox1.Controls.Add(this.TxtExam1);
             this.groupBox1.Location = new System.Drawing.Point(3, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1180, 316);
@@ -117,13 +118,6 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Lesson";
             // 
-            // TxtName
-            // 
-            this.TxtName.Location = new System.Drawing.Point(207, 99);
-            this.TxtName.Name = "TxtName";
-            this.TxtName.Size = new System.Drawing.Size(222, 31);
-            this.TxtName.TabIndex = 26;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -134,12 +128,12 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "Exam1:";
             // 
-            // TxtSurname
+            // TxtExam1
             // 
-            this.TxtSurname.Location = new System.Drawing.Point(207, 151);
-            this.TxtSurname.Name = "TxtSurname";
-            this.TxtSurname.Size = new System.Drawing.Size(222, 31);
-            this.TxtSurname.TabIndex = 34;
+            this.TxtExam1.Location = new System.Drawing.Point(207, 151);
+            this.TxtExam1.Name = "TxtExam1";
+            this.TxtExam1.Size = new System.Drawing.Size(222, 31);
+            this.TxtExam1.TabIndex = 34;
             // 
             // label3
             // 
@@ -151,12 +145,12 @@
             this.label3.TabIndex = 35;
             this.label3.Text = "Exam2:";
             // 
-            // textBox1
+            // TxtExam2
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 202);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 31);
-            this.textBox1.TabIndex = 36;
+            this.TxtExam2.Location = new System.Drawing.Point(207, 202);
+            this.TxtExam2.Name = "TxtExam2";
+            this.TxtExam2.Size = new System.Drawing.Size(222, 31);
+            this.TxtExam2.TabIndex = 36;
             // 
             // label5
             // 
@@ -168,12 +162,12 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "Exam3:";
             // 
-            // textBox2
+            // TxtExam3
             // 
-            this.textBox2.Location = new System.Drawing.Point(207, 250);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 31);
-            this.textBox2.TabIndex = 38;
+            this.TxtExam3.Location = new System.Drawing.Point(207, 250);
+            this.TxtExam3.Name = "TxtExam3";
+            this.TxtExam3.Size = new System.Drawing.Size(222, 31);
+            this.TxtExam3.TabIndex = 38;
             // 
             // button3
             // 
@@ -222,12 +216,12 @@
             this.label8.TabIndex = 54;
             this.label8.Text = "Status:";
             // 
-            // textBox5
+            // TxtStatus
             // 
-            this.textBox5.Location = new System.Drawing.Point(663, 176);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(222, 31);
-            this.textBox5.TabIndex = 55;
+            this.TxtStatus.Location = new System.Drawing.Point(663, 176);
+            this.TxtStatus.Name = "TxtStatus";
+            this.TxtStatus.Size = new System.Drawing.Size(222, 31);
+            this.TxtStatus.TabIndex = 55;
             // 
             // label7
             // 
@@ -239,12 +233,12 @@
             this.label7.TabIndex = 52;
             this.label7.Text = "Average:";
             // 
-            // textBox4
+            // TxtAverage
             // 
-            this.textBox4.Location = new System.Drawing.Point(663, 119);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(222, 31);
-            this.textBox4.TabIndex = 53;
+            this.TxtAverage.Location = new System.Drawing.Point(663, 119);
+            this.TxtAverage.Name = "TxtAverage";
+            this.TxtAverage.Size = new System.Drawing.Size(222, 31);
+            this.TxtAverage.TabIndex = 53;
             // 
             // label6
             // 
@@ -256,12 +250,20 @@
             this.label6.TabIndex = 50;
             this.label6.Text = "Project:";
             // 
-            // textBox3
+            // TxtProject
             // 
-            this.textBox3.Location = new System.Drawing.Point(663, 50);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 31);
-            this.textBox3.TabIndex = 51;
+            this.TxtProject.Location = new System.Drawing.Point(663, 50);
+            this.TxtProject.Name = "TxtProject";
+            this.TxtProject.Size = new System.Drawing.Size(222, 31);
+            this.TxtProject.TabIndex = 51;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(207, 104);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(222, 31);
+            this.comboBox1.TabIndex = 60;
             // 
             // FrmExamNotes
             // 
@@ -276,6 +278,7 @@
             this.Name = "FrmExamNotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmExamNotes";
+            this.Load += new System.EventHandler(this.FrmExamNotes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -288,24 +291,24 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtExam3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtExam2;
         private System.Windows.Forms.TextBox TxtStudentid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtSurname;
+        private System.Windows.Forms.TextBox TxtExam1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button BtnList;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox TxtStatus;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TxtAverage;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtProject;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
