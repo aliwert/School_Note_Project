@@ -40,10 +40,10 @@ namespace School_Note_Project
             CmbClub.DataSource = dt;
             con.Close();
         }
-
+        string a = "";
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            string a = "";
+            
             if (radioButton1.Checked == true)
             {
                 a = "Woman";
@@ -59,6 +59,33 @@ namespace School_Note_Project
         private void CmbClub_SelectedIndexChanged(object sender, EventArgs e)
         {
             //TxtStudentid.Text = CmbClub.SelectedValue.ToString();
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            ds.DeleteStudent(int.Parse(TxtStudentid.Text));
+            MessageBox.Show("Deleted succesfully");
+        }
+        string gender= "";
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TxtStudentid.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            TxtName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            TxtSurname.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            CmbClub.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            gender = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+            if(gender == "Woman")
+            {
+                radioButton1.Checked = true;
+                radioButton2.Checked = false;
+
+            }
+            if (gender == "Man")
+            {
+                radioButton1.Checked = false;
+                radioButton2.Checked = true;
+            }
         }
     }
 }
