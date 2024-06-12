@@ -179,6 +179,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmTeacher";
             this.Text = "FrmTeacher";
+            this.Load += new System.EventHandler(this.FrmTeacher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

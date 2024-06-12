@@ -28,5 +28,10 @@ namespace School_Note_Project
             FrmLessons lssn= new FrmLessons();
             lssn.Show();
         }
+
+        private void FrmTeacher_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
