@@ -88,7 +88,26 @@ namespace School_Note_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ds.UpdateNote(byte.Parse(comboBox1.SelectedValue.ToString()), int.Parse(TxtStudentid.Text),byte.Parse(TxtExam1.Text), byte.Parse(TxtExam2.Text), byte.Parse(TxtExam3.Text), byte.Parse(TxtProject.Text), decimal.Parse(TxtAverage.Text), bool.Parse(TxtStatus.Text), noteid);
+            byte selectedValue = byte.Parse(comboBox1.SelectedValue.ToString());
+            int studentId = int.Parse(TxtStudentid.Text);
+            byte exam1 = byte.Parse(TxtExam1.Text);
+            byte exam2 = byte.Parse(TxtExam2.Text);
+            byte exam3 = byte.Parse(TxtExam3.Text);
+            byte project = byte.Parse(TxtProject.Text);
+            decimal average = decimal.Parse(TxtAverage.Text);
+            bool status = bool.Parse(TxtStatus.Text);
+
+            ds.UpdateNote(
+                selectedValue,
+                studentId,
+                exam1,
+                exam2,
+                exam3,
+                project,
+                average,
+                status,
+                noteid
+            );
         }
     }
 }
