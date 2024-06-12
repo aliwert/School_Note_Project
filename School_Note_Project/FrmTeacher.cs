@@ -40,5 +40,12 @@ namespace School_Note_Project
             student.Show();
 
         }
+
+        private void BtnExamMarks_Click(object sender, EventArgs e)
+        {
+            FrmExamNotes notes = new FrmExamNotes();
+            notes.Show();
+
+        }
     }
 }
